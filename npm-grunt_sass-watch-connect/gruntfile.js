@@ -9,9 +9,9 @@ module.exports = function (grunt) {
           outputStyle: 'expanded'
         },
         files: [{
-          src: 'builds/components/css/style.scss',
+          src: 'components/scss/style.scss',
           dest: 'builds/development/css/style.css'
-                }]
+        }]
       }
     }, // sass
 
@@ -34,9 +34,7 @@ module.exports = function (grunt) {
         },
 
         files: ['builds/development/**/*.html',
-                'builds/components/css/*.scss',
-                'builds/development/css/*.css',
-                'builds/development/**/*.js'],
+                'components/scss/*.scss'],
 
         tasks: ['sass']
       }

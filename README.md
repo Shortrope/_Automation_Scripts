@@ -33,9 +33,9 @@ Sample Grunt setup
 This setup will:  
 - lauch an http server
 - automatically run the Sass compiler upon changes to .scss files
-- auto reload browser upon changes to .html .js or .scss files.  
+- auto reload browser upon changes to .html .js or .scss files.
 
-1. install node  
+1. install nodejs  
 2. npm install grunt-cli -g  
     - *installs grunt-cli globally. One time install*
 3. 'cd' to the project directory  
