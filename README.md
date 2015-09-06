@@ -1,6 +1,7 @@
 Npm and Grunt install
 =====================
-
+Overview
+--------
 - install node.js 
 - install terminal (cli): git-shell / git portable / git-Bash
 - at the terminal:
@@ -30,11 +31,11 @@ Npm and Grunt install
 Sample Grunt setup
 ------------------
 This setup will:  
-- lauch an http server  
-- automatically run the Sass compiler upon changes to .scss files  
+- lauch an http server
+- automatically run the Sass compiler upon changes to .scss files
 - auto reload browser upon changes to .html .js or .scss files.  
 
-1. intall node  
+1. install node  
 2. npm install grunt-cli -g  
     - *installs grunt-cli globally. One time install*
 3. 'cd' to the project directory  
@@ -44,10 +45,10 @@ This setup will:
 6. npm install grunt-sass --save-dev  
 7. npm install grunt-contrib-connect --save-dev  
 8. npm install grunt-contrib-watch --save-dev  
-9. *create the gruntfile.js using a text editor*  
+9. *create the gruntfile.js*
 10. grunt &nbsp;&nbsp;&nbsp;&nbsp; //command to launch the default grunt tasks
 
-### Sample gruntfile.js
+### gruntfile.js
     module.exports = function (grunt) {
       'use strict';
 
@@ -59,7 +60,7 @@ This setup will:
               outputStyle: 'expanded'
             },
             files: [{
-              src: 'builds/development/css/style.scss',
+              src: 'builds/components/css/style.scss',
               dest: 'builds/development/css/style.css'
                     }]
           }
@@ -84,7 +85,7 @@ This setup will:
             },
 
             files: ['builds/development/**/*.html',
-                    'builds/development/css/*.scss',
+                    'builds/components/css/*.scss',
                     'builds/development/**/*.js'],
 
             tasks: ['sass']
