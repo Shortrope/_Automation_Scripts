@@ -60,7 +60,7 @@ This setup will:
               outputStyle: 'expanded'
             },
             files: [{
-              src: 'builds/components/css/style.scss',
+              src: 'components/scss/style.scss',
               dest: 'builds/development/css/style.css'
                     }]
           }
@@ -85,7 +85,7 @@ This setup will:
             },
 
             files: ['builds/development/**/*.html',
-                    'builds/components/css/*.scss',
+                    'components/css/*.scss',
                     'builds/development/**/*.js'],
 
             tasks: ['sass']
