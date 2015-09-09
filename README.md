@@ -85,7 +85,7 @@ This setup will:
             },
 
             files: ['builds/development/**/*.html',
-                    'components/css/*.scss',
+                    'components/scss/*.scss',
                     'builds/development/**/*.js'],
 
             tasks: ['sass']
