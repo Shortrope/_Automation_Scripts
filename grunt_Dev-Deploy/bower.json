@@ -1,0 +1,19 @@
+{
+  "name": "Project_name",
+  "version": "1.0.0",
+  "authors": [
+    "Mario Kaack"
+  ],
+  "description": "Project_description",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

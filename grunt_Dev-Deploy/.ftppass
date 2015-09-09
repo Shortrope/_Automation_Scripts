@@ -1,0 +1,10 @@
+{
+  "rpi": {
+    "username": "pi",
+    "password": "pi"
+  },
+  "godaddy": {
+    "username": "uname",
+    "password": "pw"
+  }
+}
