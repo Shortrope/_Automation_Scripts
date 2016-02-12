@@ -1,0 +1,15 @@
+{
+  "name": "gulpwebserver",
+  "version": "0.0.1",
+  "description": "Gulp web server w auto reload",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mario kaack",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}
