@@ -1,103 +1,23 @@
-Npm and Grunt install
-=====================
-Overview
---------
-- install node.js 
-- install terminal (cli): git-shell / git portable / git-Bash
-- at the terminal:
-    - install grunt-cli 
-    - in the project directory
-        - initialize npm project
-        - install grunt
-        - install other automation packages
-        - create the gruntfile.js file
-        - launch grunt
-
-**gruntfile.js skeleton**  
-
-        module.exports = function(grunt) {  
-            grunt.initConfig({  
-
-                // list of tasks and their config/options  
-
-            });  //end initConfig  
-
-            // loadNPMTasks()  
-
-        };  // end wrapper function  
-
----
-
-Sample Grunt setup
-------------------
-This setup will:  
-- lauch an http server
-- automatically run the Sass compiler upon changes to .scss files
-- auto reload browser upon changes to .html .js or .scss files.
-
-1. install nodejs  
-2. npm install grunt-cli -g  
-    - *installs grunt-cli globally. One time install*
-3. 'cd' to the project directory  
-    - *do the following for each new prject*
-4. npm init  
-5. npm install grunt --save-dev  
-6. npm install grunt-sass --save-dev  
-7. npm install grunt-contrib-connect --save-dev  
-8. npm install grunt-contrib-watch --save-dev  
-9. *create the gruntfile.js*
-10. grunt &nbsp;&nbsp;&nbsp;&nbsp; //command to launch the default grunt tasks
-
-### gruntfile.js
-    module.exports = function (grunt) {
-      'use strict';
-
-      grunt.initConfig({
-
-        sass: {
-          dist: {
-            options: {
-              outputStyle: 'expanded'
-            },
-            files: [{
-              src: 'components/scss/style.scss',
-              dest: 'builds/development/css/style.css'
-                    }]
-          }
-        }, // sass
-
-        connect: {
-          server: {
-            options: {
-              hostname: 'localhost',
-              port: 3000,
-              base: 'builds/development/',
-              livereload: true
-            }
-          }
-        }, // connect
-
-        watch: {
-          scripts: {
-            options: {
-              spawn: false,
-              livereload: true
-            },
-
-            files: ['builds/development/**/*.html',
-                    'components/scss/*.scss',
-                    'builds/development/**/*.js'],
-
-            tasks: ['sass']
-          }
-        } // watch
-
-      }); // initConfig
-
-      grunt.loadNpmTasks('grunt-sass');
-      grunt.loadNpmTasks('grunt-contrib-connect');
-      grunt.loadNpmTasks('grunt-contrib-watch');
-
-      grunt.registerTask('default', ['sass', 'connect', 'watch']);
-
-    }; // wrapper function
+# Get Up and Running w Gulp
+1. Install node
+1. initialize package.json file
+```
+$ npm init  // this will create the package.json file
+```
+1. Install packages from the cli
+```
+$ npm install --global gulp-cli
+$ npm install --save-dev gulp-cli
+```
+1.  Create the file 'gulpfile.js' in the project directory
+```javascript
+var gulp = require('gulp');
+gulp.task('default', function() {
+    console.log('Gulp Works');
+    // your task code  
+});
+```
+1. Run gulp from the project directory
+```
+$ gulp
+```
