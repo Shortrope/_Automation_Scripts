@@ -2,14 +2,14 @@
 1. Install node
 1. initialize package.json file
 ```
-$ npm init  // this will create the package.json file
+$ npm init  // this will step you thru creating the package.json file
 ```
 1. Install packages from the cli
 ```
-$ npm install --global gulp-cli
-$ npm install --save-dev gulp-cli
+$ npm install --global gulp-cli   // this is a one time install (global)
+$ npm install --save-dev gulp
 ```
-1.  Create the file 'gulpfile.js' in the project directory
+1.  Create the file 'gulpfile.js'
 ```javascript
 var gulp = require('gulp');
 gulp.task('default', function() {
