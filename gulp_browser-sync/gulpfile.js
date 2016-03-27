@@ -8,5 +8,8 @@ gulp.task('server', function () {
       baseDir: 'src'
     }
   });
-  gulp.watch(['*.html', '*.css', '*.js']).on('change', reload);
+  gulp.watch(['src/*.html', 'src/css/*.css', 'src/js/*.js', 'src/images/*'])
+      .on('change', reload);
 });
+
+gulp.task('default', ['server']);
