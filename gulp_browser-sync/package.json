@@ -1,16 +1,8 @@
 {
   "name": "Project_Name",
   "version": "0.0.1",
-  "description": "Project Description",
+  "description": "Project_Description",
   "author": "Mario Kaack",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Shortrope/Project_Name.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Shortrope/Project_Name/issues"
-  },
-  "homepage": "https://github.com/Shortrope/Project_Name#readme",
   "devDependencies": {
     "browser-sync": "^2.9.8",
     "gulp": "^3.9.0"
