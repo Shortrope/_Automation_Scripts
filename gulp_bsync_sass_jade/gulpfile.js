@@ -23,7 +23,7 @@ gulp.task('sass', function () {
 });
 
 // Fire up Browser
-gulp.task('server', function () {
+gulp.task('server', ['jade', 'sass'], function () {
   bsync.init({
     server: {
       baseDir: 'build/dev/'
