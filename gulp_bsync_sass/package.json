@@ -1,0 +1,12 @@
+{
+  "name": "Project_Name",
+  "version": "0.0.1",
+  "description": "Project_Description",
+  "author": "Mario Kaack",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  }
+}
