@@ -34,17 +34,17 @@ printf "Choose Script (1): "
 read SCRIPT
 case $SCRIPT in
     2)
-        cp E:/_Automation_Scripts/gulp_bsync_sass/package.json ./
-        cp E:/_Automation_Scripts/gulp_bsync_sass/gulpfile.js ./
+        cp /_Automation_Scripts/gulp_bsync_sass/package.json ./
+        cp /_Automation_Scripts/gulp_bsync_sass/gulpfile.js ./
         ;;
     3)
-        cp E:/_Automation_Scripts/gulp_bsync_sass_jade/package.json ./
-        cp E:/_Automation_Scripts/gulp_bsync_sass_jade/gulpfile.js ./
+        cp /_Automation_Scripts/gulp_bsync_sass_jade/package.json ./
+        cp /_Automation_Scripts/gulp_bsync_sass_jade/gulpfile.js ./
         ;;
     *)
         SCRIPT=1
-        cp E:/_Automation_Scripts/gulp_browser-sync/package.json ./
-        cp E:/_Automation_Scripts/gulp_browser-sync/gulpfile.js ./
+        cp /_Automation_Scripts/gulp_browser-sync/package.json ./
+        cp /_Automation_Scripts/gulp_browser-sync/gulpfile.js ./
         ;;
 esac
 
@@ -55,15 +55,15 @@ esac
 if [ $SCRIPT -eq 1 ]; then
     mkdir -p src/css
     touch src/css/style.css
-    cp E:/_Templates/index.html src/
+    cp /_Templates/index.html src/
 else
     mkdir -p src/scss
     touch src/scss/style.scss
 
     if [ $SCRIPT -eq 2 ]; then
-        cp E:/_Templates/index.html src/
+        cp /_Templates/index.html src/
     else
-        cp E:/_Templates/index.jade src/
+        cp /_Templates/index.jade src/
     fi
 
     mkdir -p build/dev/css
@@ -93,7 +93,7 @@ npm install
 # initialize git
 #-----------------------------------------------------
 git init
-cp E:/_Templates/.gitignore ./
+cp /_Templates/.gitignore ./
 git add .
 git commit -m "Begin Project $PNAME"
 
@@ -103,14 +103,7 @@ clear
 echo -------------------------------------------------
 echo Directory structure
 echo -------------------------------------------------
-printf "${PNAME}/\n"
-ls --color=auto -F --group-directories-first
-printf "${PNAME}/src/\n"
-ls --color=auto -F --group-directories-first src/
-if [ $SCRIPT -ne 1 ]; then
-    printf "${PNAME}/build/\n"
-    ls --color=auto -F --group-directories-first build/
-fi
+tree -L 3
 echo;echo -------------------------------------------------
 echo package.json
 echo -------------------------------------------------
