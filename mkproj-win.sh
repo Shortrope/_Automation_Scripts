@@ -15,7 +15,7 @@ if [ ! "$PNAME" ]; then
     done
 fi
 
-# Get project description 
+# Get project description
 #-----------------------------------------------------
 printf "Project Description: "
 read PDESC
@@ -30,6 +30,7 @@ cd $PNAME
 printf "\n1. Gulp w Browser Sync\n"
 printf "2. Gulp w Browser Sync and Sass\n"
 printf "3. Gulp w Browser Sync, Sass and Jade\n"
+printf "4. Gulp w Browser Sync, Sass, Jade, JSHint\n"
 printf "Choose Script (1): "
 read SCRIPT
 case $SCRIPT in
@@ -40,6 +41,12 @@ case $SCRIPT in
     3)
         cp E:/_Automation_Scripts/gulp_bsync_sass_jade/package.json ./
         cp E:/_Automation_Scripts/gulp_bsync_sass_jade/gulpfile.js ./
+        ;;
+    4)
+        cp E:/_Automation_Scripts/gulp_bsync_sass_jade_js/package.json ./
+        cp E:/_Automation_Scripts/gulp_bsync_sass_jade_js/gulpfile.js ./
+        cp E:/_Automation_Scripts/gulp_bsync_sass_jade_js/.jshintrc ./
+        cp E:/_Automation_Scripts/gulp_bsync_sass_jade_js/.jscsrc ./
         ;;
     *)
         SCRIPT=1
