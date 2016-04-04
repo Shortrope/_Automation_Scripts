@@ -52,7 +52,7 @@
     "disallowSpacesInsideObjectBrackets": "all",
     "disallowSpacesInsideArrayBrackets": "all",
     "disallowSpacesInsideParentheses": true,
-    "disallowMultipleLineBreaks": true,
+    "disallowMultipleLineBreaks": false,
     "disallowCommaBeforeLineBreak": null,
     "disallowDanglingUnderscores": null,
     "disallowEmptyBlocks": null,
