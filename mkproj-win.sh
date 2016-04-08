@@ -97,6 +97,14 @@ sed -i '/Project_Description/ s@Project_Description@'"$PDESC"'@g' package.json
 #-----------------------------------------------------
 npm install
 
+# Update index.html or index.jade
+#-----------------------------------------------------
+if [ -s src/index.jade ]; then
+  sed -i '/Project_Title/ s@Project_Title@'"$PNAME"'@g' src/index.jade
+elif [ -s src/index.html ]; then 
+  sed -i '/Project_Title/ s@Project_Title@'"$PNAME"'@g' src/index.html
+fi
+
 # initialize git
 #-----------------------------------------------------
 git init
