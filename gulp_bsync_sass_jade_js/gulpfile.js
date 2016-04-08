@@ -24,8 +24,7 @@ gulp.task('jade-refresh', ['jade'], function() {
 gulp.task('sass', function() {
   return gulp
     .src('./src/scss/**/*.scss')
-    // .pipe(sass().on('error', sass.logError))
-    .pipe(sass().on('error', sassErrorHandler))
+    .pipe(sass({outputStyle:'expanded'}).on('error', sassErrorHandler))
     .pipe(gulp.dest('./build/dev/css/'));
 });
 
