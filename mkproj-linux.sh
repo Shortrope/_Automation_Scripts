@@ -72,15 +72,6 @@ else
     else
         cp /_Templates/index.jade src/
     fi
-
-    mkdir -p build/dev/css
-    mkdir build/dev/js
-    mkdir build/dev/images
-
-    mkdir -p build/production/css
-    mkdir build/production/js
-    mkdir build/production/images
-
 fi
 
 mkdir src/js
