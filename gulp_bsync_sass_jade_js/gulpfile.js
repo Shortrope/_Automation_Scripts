@@ -36,7 +36,9 @@ gulp.task('vetjs', function() {
   return gulp
     .src([
       './*.js',
-      './src/**/*.js'
+      './src/**/*.js',
+      '!./src/js/jquery-?.?.?.js'
+      '!./src/js/jquery-?.?.?.min.js'
     ])
     .pipe(gif(!args.q, gprint()))
     .pipe(jscs())

@@ -17,8 +17,8 @@
       "allowComments": true,
       "allowRegex": true
     },
-    "validateIndentation": 2,
-    "validateQuoteMarks": "'",
+    "validateIndentation": false,
+    "validateQuoteMarks": true,
 
     "disallowMultipleLineStrings": true,
     "disallowMixedSpacesAndTabs": true,
